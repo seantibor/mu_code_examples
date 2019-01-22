@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Pylint config
+*.pylintrc
+
+# student code
+student/
+
+# data from rocket launches
+data_capture/
+
+# guessing game solution code
+challenges/guessing_game.py
