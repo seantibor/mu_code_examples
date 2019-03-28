@@ -4,7 +4,7 @@ from itertools import cycle
 import random
 
 # make our line thicker
-t.pensize(2)
+#t.pensize(2)
 # make the turtle move faster
 t.speed('fastest')
 t.shape('turtle')
@@ -27,16 +27,22 @@ def wheel(pos):
 
 
 points = 5
-num_shapes = 30
+num_shapes = 50
+t.penup()
+t.goto(-100,240)
+t.pendown()
 
-for j in range(num_shapes):
-    t.pencolor(wheel(int((j / num_shapes) * 255)))
+for j in range(num_shapes,0,-1):
+    t.fillcolor(wheel(int((j / num_shapes) * 255)))
     # start our square loop
+    t.begin_fill()
     for i in range(points):
-        t.forward(50)
+        t.forward(j * 2)
         t.right(720 / points)
-        t.forward(50)
+        t.forward(j * 2)
         t.left(360 / points)
+    t.end_fill()
     t.right(360 / num_shapes)
-    t.forward(15)
+    t.forward(j//2)
     new_color = wheel(j)
+t.ht()
