@@ -114,3 +114,5 @@ data_capture/
 
 # guessing game solution code
 challenges/guessing_game.py
+
+.idea
