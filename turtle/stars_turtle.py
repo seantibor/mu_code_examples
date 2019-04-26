@@ -26,7 +26,7 @@ def wheel(pos):
         return (0, int(pos * 3), int(255 - pos * 3))
 
 
-points = 5
+points = 6
 num_shapes = 50
 t.penup()
 t.goto(-100,240)
